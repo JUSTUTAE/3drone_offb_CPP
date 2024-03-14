@@ -15,6 +15,11 @@ void state_cb(const mavros_msgs::State::ConstPtr& msg){
     current_state = *msg;
 }
 
+geometry_msgs::PoseStamped current_pose;
+void pose_cb(const geometry_msgs::PoseStamped::ConstPtr& msg) {
+    current_pose = *msg;
+} //add
+
 int main(int argc, char **argv)
 {
     ros::init(argc, argv, "uav2_offb_node");
@@ -29,8 +34,12 @@ int main(int argc, char **argv)
     ros::ServiceClient set_mode_client = nh.serviceClient<mavros_msgs::SetMode>
             ("uav2/mavros/set_mode");
 
+    ros::Subscriber pose_sub = nh.subscribe<geometry_msgs::PoseStamped>
+            ("uav0/mavros/local_position/pose", 10, pose_cb); //add
+
     //the setpoint publishing rate MUST be faster than 2Hz
     ros::Rate rate(20.0);
+
 
     // wait for FCU connection
     while(ros::ok() && !current_state.connected){
@@ -38,10 +47,9 @@ int main(int argc, char **argv)
         rate.sleep();
     }
 
+
     geometry_msgs::PoseStamped pose;
-    pose.pose.position.x = 0;
-    pose.pose.position.y = 0;
-    pose.pose.position.z = 2;
+
 
     //send a few setpoints before starting
     for(int i = 100; ros::ok() && i > 0; --i){
@@ -75,6 +83,11 @@ int main(int argc, char **argv)
                 }
                 last_request = ros::Time::now();
             }
+
+            pose.pose.position.x = (current_pose.pose.position.x)-2.5;
+            pose.pose.position.y = (current_pose.pose.position.y)+2;
+            pose.pose.position.z = 2;
+
         }
 
         local_pos_pub.publish(pose);
