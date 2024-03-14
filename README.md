@@ -16,7 +16,11 @@ uav0:
       x <15 , x=x+0.02
 
 
-[/uav/mavros/local_position_pose]
+
+[graph]
+
+
+/uav/mavros/local_position_pose
 
 uav0_x:
 
