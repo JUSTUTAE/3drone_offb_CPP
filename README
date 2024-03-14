@@ -6,4 +6,3 @@ uav0:
       y = 3 * sin(2 * M_PI / 5 * x)
       x <15 , x=x+0.02
 
-![x](https://github.com/JUSTUTAE/3drone_offb_CPP/assets/132987987/52752edb-c895-40f6-9716-26fe3118429a)
