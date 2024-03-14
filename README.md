@@ -42,3 +42,18 @@ uav0_z:
 
 
 ![z2](https://github.com/JUSTUTAE/3drone_offb_CPP/assets/132987987/cdb769c6-3623-421f-8631-0e566f2b75af)
+
+
+
+
+[Qground_control_capture]
+
+
+![Screenshot from 2024-03-14 14-15-27](https://github.com/JUSTUTAE/3drone_offb_CPP/assets/132987987/24510147-2c69-48af-a592-a5a2bc6f2b9b)
+
+
+![Screenshot from 2024-03-14 14-15-45](https://github.com/JUSTUTAE/3drone_offb_CPP/assets/132987987/42eb88f6-43f9-4c6c-9593-3168ee7778af)
+
+
+![Screenshot from 2024-03-14 14-15-50](https://github.com/JUSTUTAE/3drone_offb_CPP/assets/132987987/80dabcb0-8ab8-4453-ac59-620b67e11730)
+
