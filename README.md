@@ -6,14 +6,15 @@ uav0 uav1 uav3
 
 uav0 moves sin trajectory.
 uav1,uav2 are follow uav0 with x-2.5m , y - 2m 
-
-
-
-
-
 uav0:
       y = 3 * sin(2 * M_PI / 5 * x)
       x <15 , x=x+0.02
+
+
+
+
+![Screenshot from 2024-03-14 13-56-59](https://github.com/JUSTUTAE/3drone_offb_CPP/assets/132987987/34150c86-2f1d-4c84-af5b-9de2cd658201)
+
 
 
 
